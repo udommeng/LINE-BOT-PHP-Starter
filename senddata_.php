@@ -3,7 +3,7 @@
 $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJjwwNH/9wsejZi04ILz8Z/P3U0g1IBEbECRd0VGaT3SKKr1FX6aH45tWa0qOlnL90T6ynTQQ3wG7hGcSeeejNadJwdB04t89/1O/w1cDnyilFU=';
 
 
-
+//-- user id ที่จะทำการส่ง --
 $userID = 'U3ecb2860486ae1014519e0d957ae51c4';
 
 $date = date("Y-m-d");
@@ -12,7 +12,7 @@ $time = date("H:i:s");
 // Build message to reply back
 $messages = [
     'type' => 'text',
-    'text' => "ทดสอบส่ง ข้อความถึงฝน " .$date
+    'text' => "ทดสอบส่ง ข้อความถึงฝน " .$date .$time
 ];
             
 
