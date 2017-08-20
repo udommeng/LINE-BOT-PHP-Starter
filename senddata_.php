@@ -1,19 +1,14 @@
 <?php
 
 $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJjwwNH/9wsejZi04ILz8Z/P3U0g1IBEbECRd0VGaT3SKKr1FX6aH45tWa0qOlnL90T6ynTQQ3wG7hGcSeeejNadJwdB04t89/1O/w1cDnyilFU=';
+// Get POST body content
+$content = file_get_contents('php://input');
 
 
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $access_token]);
-
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
-$response = $bot->pushMessage('idbc8a6b482224421bbabfde0bd23cffbd', $textMessageBuilder);
-
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
 
 // Make a POST Request to Messaging API to reply to sender
-/*$url = 'https://api.line.me/v2/bot/message/reply';
+$url = 'https://api.line.me/v2/bot/message/reply';
 $data = [
     'replyToken' => "idbc8a6b482224421bbabfde0bd23cffbd",
     'messages' => ["ทดสอบส่ง Line"],
@@ -30,4 +25,4 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 curl_close($ch);
 
-echo $result;*/
+echo $result;
