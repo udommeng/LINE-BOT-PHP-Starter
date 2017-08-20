@@ -22,6 +22,7 @@ if (!is_null($idata['userId'])) {
 
 
 echo $text;
-echo $url;
-echo $result;
+//echo $url;
+
+//echo $result;
 
