@@ -12,7 +12,7 @@ $time = date("H:i:s");
 // Build message to reply back
 $messages = [
     'type' => 'text',
-    'text' => "ทดสอบส่ง ข้อความถึงฝน " .$date .$time
+    'text' => "ทดสอบส่ง ข้อความถึงฝน " .$date ." / " . $time
 ];
             
 
