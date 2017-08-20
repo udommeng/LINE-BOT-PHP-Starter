@@ -6,11 +6,11 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 
 $userID = 'U3ecb2860486ae1014519e0d957ae51c4';
 
-			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => " รหัส id" 
-            ];
+// Build message to reply back
+$messages = [
+    'type' => 'text',
+    'text' => "ทดสอบส่ง ข้อความถึงฝน " 
+];
             
 
 // Make a POST Request to Messaging API to reply to sender
