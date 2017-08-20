@@ -13,6 +13,15 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $result = curl_exec($ch);
 curl_close($ch);
 
+$idata = json_decode($result, true);
+if (!is_null($idata['userId'])) {
+    $text = $idata['displayName'];
+
+}
+
+
+
+echo $text;
 echo $url;
 echo $result;
 
