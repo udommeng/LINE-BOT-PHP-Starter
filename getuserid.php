@@ -18,11 +18,15 @@ if(count($idata) == 0){
     echo "ไม่มีข้อมุล";
 }else{
     $text = $idata['displayName'];
+    $userids = $idata['userId'];
+
+    echo $text;
+    echo $userids;
 }
 
 
 
-echo $text;
+
 //echo $url;
 
 //echo $result;
