@@ -6,10 +6,13 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 
 $userID = 'U3ecb2860486ae1014519e0d957ae51c4';
 
+$date = date("Y-m-d");
+$time = date("H:i:s");
+
 // Build message to reply back
 $messages = [
     'type' => 'text',
-    'text' => "ทดสอบส่ง ข้อความถึงฝน " 
+    'text' => "ทดสอบส่ง ข้อความถึงฝน " .$date
 ];
             
 
