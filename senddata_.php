@@ -4,7 +4,7 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 
 
 
-$replyToken = 'ide152db0b8e1b4d0f8f5de90fe9ddd5c3';
+$userID = 'U3ecb2860486ae1014519e0d957ae51c4';
 
 			// Build message to reply back
 			$messages = [
@@ -14,14 +14,14 @@ $replyToken = 'ide152db0b8e1b4d0f8f5de90fe9ddd5c3';
             
 
 // Make a POST Request to Messaging API to reply to sender
-$url = 'https://api.line.me/v2/bot/message/reply';
+$url = 'https://api.line.me/v2/bot/message/push';
 $data = [
-    'replyToken' => $replyToken,
+    'to' => $userID,
     'messages' => [$messages],
 ];
 
 $post = json_encode($data);
-$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' .$access_token);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
