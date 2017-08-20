@@ -4,7 +4,7 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 
 
 
-$replyToken = 'idbc8a6b482224421bbabfde0bd23cffbd';
+$replyToken = 'ide152db0b8e1b4d0f8f5de90fe9ddd5c3';
 
 			// Build message to reply back
 			$messages = [
