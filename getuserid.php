@@ -14,9 +14,10 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 $idata = json_decode($result, true);
-if (!is_null($idata['userId'])) {
+if(count($idata) == 0){
+    echo "ไม่มีข้อมุล";
+}else{
     $text = $idata['displayName'];
-
 }
 
 
