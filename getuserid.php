@@ -14,6 +14,7 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 $idata = json_decode($result, true);
+
 if(count($idata) == 0){
     echo "ไม่มีข้อมุล";
 }else{
