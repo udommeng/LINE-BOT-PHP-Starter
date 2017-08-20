@@ -1,18 +1,25 @@
 <?php
 
 $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJjwwNH/9wsejZi04ILz8Z/P3U0g1IBEbECRd0VGaT3SKKr1FX6aH45tWa0qOlnL90T6ynTQQ3wG7hGcSeeejNadJwdB04t89/1O/w1cDnyilFU=';
-// Get POST body content
-$content = file_get_contents('php://input');
 
 
 
+$replyToken = 'idbc8a6b482224421bbabfde0bd23cffbd';
+
+			// Build message to reply back
+			$messages = [
+				'type' => 'text',
+				'text' => " รหัส id" 
+            ];
+            
 
 // Make a POST Request to Messaging API to reply to sender
 $url = 'https://api.line.me/v2/bot/message/reply';
 $data = [
-    'replyToken' => "idbc8a6b482224421bbabfde0bd23cffbd",
-    'messages' => ["ทดสอบส่ง Line"],
+    'replyToken' => $replyToken,
+    'messages' => [$messages],
 ];
+
 $post = json_encode($data);
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
