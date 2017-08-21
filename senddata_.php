@@ -4,7 +4,8 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 
 
 //-- user id ที่จะทำการส่ง --
-$userID = 'U3ecb2860486ae1014519e0d957ae51c4';
+$userID1 = 'U3ecb2860486ae1014519e0d957ae51c4';
+$userID2 = 'U7a60698bcec0bc20dacf1c8be8775b24';
 
 $date = date("Y-m-d");
 $time = date("H:i:s");
@@ -19,7 +20,7 @@ $messages = [
 // Make a POST Request to Messaging API to reply to sender
 $url = 'https://api.line.me/v2/bot/message/push';
 $data = [
-    'to' => $userID,
+    'to' => $userID1,'to' => $userID2,
     'messages' => [$messages],
 ];
 
