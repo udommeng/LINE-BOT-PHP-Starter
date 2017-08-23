@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <h1>test</h1>
+    <h1>ทดสอบ เชื่อมต่อฐานข้อมูล กับ chaiyohosting</h1>
 
 <?
 
