@@ -20,7 +20,7 @@ function insertUserId($userId,$message){
 	}
 
 	
-	insertUserId("ทดสอบ","Test");
+	//insertUserId("ทดสอบ","Test");
 	echo "out put";
 	mysqli_close($conn);
 ?>
