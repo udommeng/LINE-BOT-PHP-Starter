@@ -1,6 +1,7 @@
 <?php
 
 function insertUserId($userId,$message){
+
     $serverName = "ap-cdbr-azure-southeast-b.cloudapp.net";
     $userName = "b7d6df679dcdd2";
     $userPassword = "4f6be5a0";
@@ -11,7 +12,7 @@ function insertUserId($userId,$message){
 		if (mysqli_connect_errno())
 		{
 			$sql = "insert into tbl_line(userId,message) values('$userId','$message')";
-			$result = mysqli_query($conn,$sql);
+			$result = mysqli_query($conn,$sql) or die("เอ็กซิคิวต์คำสั่ง SQL ไม่ได้");
 		}
 
 	
