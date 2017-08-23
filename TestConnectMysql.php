@@ -20,8 +20,8 @@ function insertUserId($userId,$message){
 	}
 
 	
-	$test = insertUserId("ทดสอบ","Test");
-	echo "out put" .$test ;
+	insertUserId("ทดสอบ","Test");
+	echo "out put";
 	mysqli_close($conn);
 ?>
 
