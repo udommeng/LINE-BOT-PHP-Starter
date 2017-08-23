@@ -17,12 +17,13 @@ function insertUserId($userId,$message){
 	
 		
 			mysqli_close($conn);
+			return $result;
 	
 	}
 
 	
-	insertUserId("ทดสอบ","Test");
-	echo "out put" .$result ;
+	$test = insertUserId("ทดสอบ","Test");
+	echo "out put" .$test ;
 	mysqli_close($conn);
 ?>
 
