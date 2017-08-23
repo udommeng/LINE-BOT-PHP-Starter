@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <h1>ทดสอบ เชื่อมต่อฐานข้อมูล กับ chaiyohosting</h1>
+    <h1>ทดสอบ เชื่อมต่อฐานข้อมูล กับ azure</h1>
 
 <?
 
@@ -26,7 +26,7 @@
    //$userPassword = "U_e2qx15";
    //$dbName = "misschoo_line";
   
-	$conn = mysqli_connect($serverName,$userName,$userPassword);
+	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 
 	if (mysqli_connect_errno())
 	{
