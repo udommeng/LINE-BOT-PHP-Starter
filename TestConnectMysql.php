@@ -15,7 +15,7 @@
 	$query = mysqli_query($conn,$sql);
 
 	if($query) {
-		echo "Record add successfully";
+		echo "Record add successfully" .$sql;
 	}else{
 		echo $sql;
 	}
