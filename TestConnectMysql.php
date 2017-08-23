@@ -10,7 +10,7 @@
 	
 	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 
-	$sql = "insert into tbl_line(userId,message) values('.$userId1','.$message1')";
+	$sql = "insert into tbl_line(userId,message) values('$userId1','$message1')";
 
 	$query = mysqli_query($conn,$sql);
 
