@@ -1,4 +1,25 @@
 <?php
+
+function insertUserId($userId,$message){
+    $serverName = "ap-cdbr-azure-southeast-b.cloudapp.net";
+    $userName = "b7d6df679dcdd2";
+    $userPassword = "4f6be5a0";
+	$dbName = "misschool";
+	
+	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+	
+		if (mysqli_connect_errno())
+		{
+			$sql = "insert into tbl_line(userId,message) values('$userId','$message')";
+			$result = mysqli_query($conn,$sql);
+		}
+
+	
+		mysqli_close($conn);
+
+}
+
+
 $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJjwwNH/9wsejZi04ILz8Z/P3U0g1IBEbECRd0VGaT3SKKr1FX6aH45tWa0qOlnL90T6ynTQQ3wG7hGcSeeejNadJwdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
@@ -18,7 +39,9 @@ if (!is_null($events['events'])) {
 
             // Get userID
             $userId = $event['source']['userId'];
-
+			
+			insertUserId($userid,$text);
+			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
