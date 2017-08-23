@@ -8,7 +8,6 @@
 		$dbName = "misschool";
 		
 		$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-		mysql_query("SET NAMES TIS620");
 		
 		$sql = "insert into tbl_line(userId,message) values('$userId1','$message1')";
 
