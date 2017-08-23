@@ -7,15 +7,12 @@ function insertUserId($userId,$message){
 		$userPassword = "4f6be5a0";
 		$dbName = "misschool";
 		
-		$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-		
-			if (mysqli_connect_errno())
-			{
-				$sql = "insert into misschool.tbl_line(userId,message) values('.$userId','.$message')";
-				$result = mysqli_query($conn,$sql) or die("เอ็กซิคิวต์คำสั่ง SQL ไม่ได้");
-			}
-	
-		
+		$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName) or die("Error Connect to Database");
+
+			$sql = "insert into misschool.tbl_line(userId,message) values('.$userId','.$message')";
+
+			$result = mysql_query($sql) or die("เอ็กซิคิวต์คำสั่ง SQL ไม่ได้");
+
 			mysqli_close($conn);
 			return $result;
 	
