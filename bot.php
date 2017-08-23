@@ -6,9 +6,11 @@
 		$userName = "b7d6df679dcdd2";
 		$userPassword = "4f6be5a0";
 		$dbName = "misschool";
-		
+
+
 		$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-		
+
+		mysqli_query($conn,"SET NAMES UTF8");	
 		$sql = "insert into tbl_line(userId,message) values('$userId1','$message1')";
 
 		$query = mysqli_query($conn,$sql);
@@ -43,7 +45,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text.= " user ID" .$userId ." " .$result
+				'text' => $text.= " user ID [" .$userId ."] " .$result
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
