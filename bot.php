@@ -8,7 +8,8 @@
 		$dbName = "misschool";
 		
 		$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-
+		mysql_query("SET NAMES TIS620");
+		
 		$sql = "insert into tbl_line(userId,message) values('$userId1','$message1')";
 
 		$query = mysqli_query($conn,$sql);
@@ -38,7 +39,7 @@ if (!is_null($events['events'])) {
             // Get userID
             $userId = $event['source']['userId'];
 			
-			insert_data_line($userid,$text);
+			insert_data_line($userId,$text);
 
 			// Build message to reply back
 			$messages = [
