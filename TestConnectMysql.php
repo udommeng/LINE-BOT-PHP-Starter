@@ -21,7 +21,7 @@
    $userPassword = "U_e2qx15";
    $dbName = "misschoo_line";
   
-	$conn = mysqli_connect($serverName,$userName,$userPassword);
+	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 
 	if (mysqli_connect_errno())
 	{
