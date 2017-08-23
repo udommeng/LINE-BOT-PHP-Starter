@@ -30,14 +30,13 @@ function insertUserId($userId,$message){
 	$userId1 = "test";
 	$message1 = "ทดสอบ";
 
-	$conn = mysql_connect($serverName,$userName,$userPassword) or die("Error Connect to Database");
-	$objDB = mysql_select_db("misschool");
+	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 
 	$sql = "insert into tbl_line(userId,message) values('.$userId1','.$message1')";
 
-	$result = mysql_query($sql);
+	$result = mysql_db_query($conn,$sql);
 
-	echo "out put";
+	echo "out put" .$result ;
 	mysqli_close($conn);
 ?>
 
