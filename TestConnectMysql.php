@@ -11,7 +11,7 @@ function insertUserId($userId,$message){
 		
 			if (mysqli_connect_errno())
 			{
-				$sql = "insert into misschool.tbl_line(userId,message) values('$userId','$message')";
+				$sql = "insert into misschool.tbl_line(userId,message) values('.$userId','.$message')";
 				$result = mysqli_query($conn,$sql) or die("เอ็กซิคิวต์คำสั่ง SQL ไม่ได้");
 			}
 	
