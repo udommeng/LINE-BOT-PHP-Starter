@@ -29,7 +29,7 @@
 	}
 	else
 	{
-		echo "Database Connected.";
+		echo "Database Connected. misschoo_line";
 	}
 
 	mysqli_close($conn);
