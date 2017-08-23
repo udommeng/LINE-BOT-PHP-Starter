@@ -10,7 +10,7 @@
 
 		$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 
-		mysqli_query($conn,"SET NAMES UTF8");	
+		mysqli_query($conn,"SET NAMES UTF8"); //-- เพื่อให้เก็บเป็นภาษาไทยได้ --
 		$sql = "insert into tbl_line(userId,message) values('$userId1','$message1')";
 
 		$query = mysqli_query($conn,$sql);
