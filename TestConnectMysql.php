@@ -1,30 +1,23 @@
 <?php
 
+$serverName = "mysql-5.5.chaiyohosting.com";
+$userName = "misschoo_line";
+$userPassword = "U_e2qx15";
+$dbName = "misschoo_line";
 
-	//insertUserId("ทดสอบ","Test");
-	function insert_data_line($userId1,$message1){
-	$serverName = "ap-cdbr-azure-southeast-b.cloudapp.net";
-	$userName = "b7d6df679dcdd2";
-	$userPassword = "4f6be5a0";
-	$dbName = "misschool";
-	
-	$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+$link = mysqli_connect($serverName,$userName, $userPassword, $dbName);
 
-	$sql = "insert into tbl_line(userId,message) values('$userId1','$message1')";
-
-	$query = mysqli_query($conn,$sql);
-
-	if($query) {
-		echo "Record add successfully" .$sql;
-	}else{
-		echo $sql;
-	}
-
-	mysqli_close($conn);
-
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
 }
 
-	insert_data_line("test1","ทดสอบ1");
+echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+
+mysqli_close($link);
 ?>
 
 
