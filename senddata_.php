@@ -13,7 +13,7 @@ function sendLine($LineId,$iMessage){
     // Build message to reply back
     $messages = [
         'type' => 'text',
-        'text' => "ทดสอบ"
+        'text' => $iMessage
     ];
                 
 
@@ -40,6 +40,6 @@ function sendLine($LineId,$iMessage){
 
 };
 
- sendLine($userID1,"ทดสอบ");
+ sendLine($userID1,"ทดสอบ1");
 
 ?>
