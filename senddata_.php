@@ -1,7 +1,5 @@
 <?php
 
-
-
     $userID1 = 'U3ecb2860486ae1014519e0d957ae51c4';
     $userID2 = 'U02196f392b0efbedefbfe0996d77ff34';
 
@@ -15,7 +13,7 @@ function sendLine($LineId,$iMessage){
     // Build message to reply back
     $messages = [
         'type' => 'text',
-        'text' => $iMessage,
+        'text' => "ทดสอบ"
     ];
                 
 
