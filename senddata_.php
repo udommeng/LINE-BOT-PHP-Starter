@@ -1,6 +1,6 @@
 <?php
 
-$access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJjwwNH/9wsejZi04ILz8Z/P3U0g1IBEbECRd0VGaT3SKKr1FX6aH45tWa0qOlnL90T6ynTQQ3wG7hGcSeeejNadJwdB04t89/1O/w1cDnyilFU=';
+
 
     $userID1 = 'U3ecb2860486ae1014519e0d957ae51c4';
     $userID2 = 'U02196f392b0efbedefbfe0996d77ff34';
@@ -8,14 +8,14 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 function sendLine($LineId,$iMessage){
     //-- user id ที่จะทำการส่ง --
 
-
+    $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJjwwNH/9wsejZi04ILz8Z/P3U0g1IBEbECRd0VGaT3SKKr1FX6aH45tWa0qOlnL90T6ynTQQ3wG7hGcSeeejNadJwdB04t89/1O/w1cDnyilFU=';
     $date = date("Y-m-d");
     $time = date("H:i:s");
 
     // Build message to reply back
     $messages = [
         'type' => 'text',
-        'text' => $iMessage
+        'text' => [$iMessage]
     ];
                 
 
@@ -42,6 +42,6 @@ function sendLine($LineId,$iMessage){
 
 };
 
- sendLine($userID1,"ทดสอบ"  .$date ." / " . $time)
+ sendLine($userID1,"ทดสอบ");
 
 ?>
