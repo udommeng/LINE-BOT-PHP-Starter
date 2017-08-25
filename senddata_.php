@@ -15,7 +15,7 @@ function sendLine($LineId,$iMessage){
     // Build message to reply back
     $messages = [
         'type' => 'text',
-        'text' => [$iMessage]
+        'text' => $iMessage,
     ];
                 
 
