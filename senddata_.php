@@ -22,7 +22,7 @@ function sendLine($LineId,$iMessage){
     // Make a POST Request to Messaging API to reply to sender
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = [
-        'to' => [$LineId],
+        'to' => $LineId,
         'messages' => [$messages],
     ];
 
