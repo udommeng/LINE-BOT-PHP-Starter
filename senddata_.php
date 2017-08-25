@@ -5,7 +5,7 @@ $access_token = 'q30MmQc3ML9v7/o1R4yqt+HSDZvoupL04oSpI3LXl/nE43Vh49M0v4B69oFRIJj
 
 //-- user id ที่จะทำการส่ง --
 $userID1 = 'U3ecb2860486ae1014519e0d957ae51c4';
-$userID2 = 'U7a60698bcec0bc20dacf1c8be8775b24';
+$userID2 = 'U02196f392b0efbedefbfe0996d77ff34';
 
 $date = date("Y-m-d");
 $time = date("H:i:s");
